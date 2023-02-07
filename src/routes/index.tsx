@@ -1,10 +1,7 @@
-import Title from "~/components/Title/Title";
-import "./index.css";
-
 export default function Home() {
   return (
     <main>
-      <Title />
+      <p>List technologies route</p>
     </main>
   );
 }
