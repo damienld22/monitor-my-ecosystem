@@ -1,9 +1,5 @@
 import { Router } from "@solidjs/router";
-import {
-  queryAllByAttribute,
-  queryByAttribute,
-  render,
-} from "@solidjs/testing-library";
+import { render } from "@solidjs/testing-library";
 import { vi } from "vitest";
 import Header from "./Header";
 

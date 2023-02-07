@@ -16,6 +16,7 @@ import fr from "./i18n/fr.json";
 import en from "./i18n/en.json";
 import "./root.css";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const i18nContext = createI18nContext({ fr, en }, "fr");
 
@@ -40,6 +41,7 @@ export default function Root() {
                 <FileRoutes />
               </Routes>
             </ErrorBoundary>
+            <Footer />
           </Suspense>
         </I18nContext.Provider>
         <Scripts />
