@@ -1,5 +1,9 @@
 {
-  "routing-add": "Ajouter une nouvelle technology",
+  "add": "Ajouter",
+  "routing-add": "Ajouter une nouvelle technologie",
   "routing-list": "Lister les technologies",
+  "technology-category": "Catégorie",
+  "technology-github-package": "Nom du package GitHub",
+  "technology-language": "Langage associé",
   "title": "Mon écosystème"
 }

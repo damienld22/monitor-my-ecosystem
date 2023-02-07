@@ -25,6 +25,17 @@ p {
   line-height: 1.35;
 }
 
+label,
+input,
+select,
+button {
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 5px 20px 5px 20px;
+}
+
 header,
 footer {
   display: flex;
@@ -48,4 +59,24 @@ li {
 
 #menu {
   align-self: flex-start;
+}
+
+#add-technology-form {
+  width: 30vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.add-technology-form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.add-technology-form-item > label {
+  margin-bottom: 5px;
 }

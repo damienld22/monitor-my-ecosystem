@@ -1,7 +1,9 @@
+import AddTechnologyForm from "~/components/AddTechnologyForm/AddTechnologyForm";
+
 export default function AddTechnologyRoute() {
   return (
     <main>
-      <p>Add technology route</p>
+      <AddTechnologyForm />
     </main>
   );
 }
