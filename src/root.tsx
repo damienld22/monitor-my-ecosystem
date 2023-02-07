@@ -10,8 +10,13 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import { createI18nContext, I18nContext } from "@solid-primitives/i18n";
 import { ErrorBoundary } from "solid-start/error-boundary";
+import fr from "./i18n/fr.json";
+import en from "./i18n/en.json";
 import "./root.css";
+
+const i18nContext = createI18nContext({ fr, en }, "fr");
 
 export default function Root() {
   return (
@@ -26,13 +31,15 @@ export default function Root() {
         />
       </Head>
       <Body>
-        <Suspense>
-          <ErrorBoundary>
-            <Routes>
-              <FileRoutes />
-            </Routes>
-          </ErrorBoundary>
-        </Suspense>
+        <I18nContext.Provider value={i18nContext}>
+          <Suspense>
+            <ErrorBoundary>
+              <Routes>
+                <FileRoutes />
+              </Routes>
+            </ErrorBoundary>
+          </Suspense>
+        </I18nContext.Provider>
         <Scripts />
       </Body>
     </Html>

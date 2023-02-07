@@ -1,7 +1,15 @@
-import { fireEvent, queryByTestId, render } from "@solidjs/testing-library";
+import { render } from "@solidjs/testing-library";
+import { vi } from "vitest";
 import Title from "./Title";
 
 describe("<Title />", () => {
+  beforeAll(() => {
+    // Mock i18n
+    vi.mock("@solid-primitives/i18n", () => ({
+      useI18n: () => [(value: string) => value],
+    }));
+  });
+
   it("increments value", async () => {
     // ARRANGE
     const { queryByTestId, unmount } = render(() => <Title />);
@@ -9,7 +17,7 @@ describe("<Title />", () => {
 
     // ASSERT
     expect(h1).toBeInTheDocument();
-    expect(h1).toHaveTextContent(/Monitor my ecosystem/);
+    expect(h1).toHaveTextContent(/^title$/);
     unmount();
   });
 });
