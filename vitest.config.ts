@@ -6,7 +6,6 @@ export default defineConfig({
   test: {
     deps: {
       registerNodeLoader: true,
-      inline: [/solid-js/],
     },
     environment: "jsdom",
     globals: true,

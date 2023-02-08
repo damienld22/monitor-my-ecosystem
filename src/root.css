@@ -80,3 +80,7 @@ li {
 .add-technology-form-item > label {
   margin-bottom: 5px;
 }
+
+.error {
+  color: red;
+}

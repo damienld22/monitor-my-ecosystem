@@ -4,6 +4,7 @@
   "routing-add": "Add a new technology",
   "technology-category": "Category",
   "technology-github-package": "GitHub package name",
+  "technology-github-package-error": "Please type a package name",
   "technology-language": "Associated language",
   "title": "My ecosystem"
 }

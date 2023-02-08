@@ -4,6 +4,7 @@
   "routing-list": "Lister les technologies",
   "technology-category": "Catégorie",
   "technology-github-package": "Nom du package GitHub",
+  "technology-github-package-error": "Veuillez saisir un nom de package",
   "technology-language": "Langage associé",
   "title": "Mon écosystème"
 }

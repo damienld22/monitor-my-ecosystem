@@ -17,6 +17,7 @@ import en from "./i18n/en.json";
 import "./root.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import { TechnologyContextProvider } from "./hooks/useTechnologies";
 
 const i18nContext = createI18nContext({ fr, en }, "fr");
 
@@ -34,15 +35,17 @@ export default function Root() {
       </Head>
       <Body>
         <I18nContext.Provider value={i18nContext}>
-          <Suspense>
-            <Header />
-            <ErrorBoundary>
-              <Routes>
-                <FileRoutes />
-              </Routes>
-            </ErrorBoundary>
-            <Footer />
-          </Suspense>
+          <TechnologyContextProvider>
+            <Suspense>
+              <Header />
+              <ErrorBoundary>
+                <Routes>
+                  <FileRoutes />
+                </Routes>
+              </ErrorBoundary>
+              <Footer />
+            </Suspense>
+          </TechnologyContextProvider>
         </I18nContext.Provider>
         <Scripts />
       </Body>
